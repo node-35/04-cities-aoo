@@ -15,3 +15,6 @@ const main = async () => {
 }
 
 main();
+
+// no existe la columna .... -> alter: true
+// la columna ... tiene valores null -> quitar el allow null
