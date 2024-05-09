@@ -5,6 +5,7 @@ const Continent = require('./Continent');
 const Student = require('./Student');
 const Professor = require('./Professor');
 const Course = require('./Course');
+const Test = require('./Test');
 
 User.belongsTo(Country);
 Country.hasMany(User);
@@ -23,3 +24,6 @@ Professor.belongsToMany(Student, { through: "students_professors" });
 
 Student.belongsToMany(Course, { through: "students_courses" });
 Course.belongsToMany(Student, { through: "students_courses" });
+
+Course.hasMany(Test);
+Test.belongsTo(Course);
